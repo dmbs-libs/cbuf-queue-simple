@@ -28,7 +28,7 @@
 #include "cbuf.h"
 
 /* 
- * Queue declare macro. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 0(eq. 256).
+ * Queue declare macro. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 256.
  */
 #define QUEUE(name,type,size)       struct name { cbuf_t cbuf; type buffer[size]; } name
 
