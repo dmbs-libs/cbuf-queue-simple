@@ -16,7 +16,7 @@ typedef struct cbuf_t {
 } cbuf_t;
 
 /* 
- * Init circular buffer. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 0(eq. 256).
+ * Init circular buffer. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 256.
  */
 void
 cbuf_init(cbuf_t *cbuf, uint8_t cbuf_size);
@@ -51,7 +51,7 @@ cbuf_get(cbuf_t *cbuf);
 
 ```c
 /* 
- * Queue declare macro. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 0(eq. 256).
+ * Queue declare macro. Size must be one of these values: 2, 4, 8, 16, 32, 64, 128, 256.
  */
 #define QUEUE(name,type,size)       struct name { cbuf_t cbuf; type buffer[size]; } name
 
